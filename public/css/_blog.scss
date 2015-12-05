@@ -1,4 +1,4 @@
-.container--articles {
+.articles {
   margin-top: 2em;
   @media (min-width: $screen-medium) {
     padding-left: 10rem;
@@ -317,4 +317,8 @@ code {
   img {
     max-width: 100%;
   }
+}
+
+.latest-posts {
+  padding: 32px 0;
 }

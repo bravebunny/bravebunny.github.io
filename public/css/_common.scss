@@ -36,6 +36,11 @@ header, h1, h2, h3, h4, h5 {
   font-weight: 400;
 }
 
+h1 {
+  font-weight: 100;
+  font-size: 50px;
+}
+
 header.header {
   display: block;
   background: $green;
@@ -43,22 +48,15 @@ header.header {
   text-align: center;
   padding: 20px;
 
-  a,
-  a:hover,
-  a:active,
-  a:focus {
-    text-decoration: none;
-    color: $light-green;
-  }
-
   img {
     width: 250px;
     height: 250px;
   }
 
   h1 {
+    color: $light-green;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 
@@ -90,17 +88,45 @@ header.header {
   margin-left: -1em;
 }
 
+.section {
+  padding: 32px;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+}
+
 .footer {
-  @extend .container;
-  @extend .container--articles;
-  font-size: 0.8em;
-  margin-bottom: 0;
-  margin-top: 4em;
-  color: $color-text-lighter;
-  a, &:visited {
-    color: $color-text-light;
-    &:hover, &:active, &:focus {
-      color: $color-text;
+  @extend .section;
+  background-color: #333;
+  background-image: url('/images/svuv.gif');
+  min-height: 350px;
+
+  .social-buttons {
+    font-size: 4em;
+    margin: 0px
+  }
+
+  a {
+    color: white;
+    margin: 0 5px;
+    opacity: 0.7;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: white;
+    }
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

@@ -1,5 +1,6 @@
-.container
-  h2 Latest from our blog
-  != partial("_shared/articles", { postlimit: 2 })
+.latest-posts
+  .container
+    h1 Latest from our blog
+    != partial("_shared/articles", { postlimit: 2 })
 
 != partial("_shared/games")

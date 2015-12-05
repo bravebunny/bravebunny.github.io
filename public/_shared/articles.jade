@@ -17,7 +17,7 @@ for article, slug in public.blog._data
   to olders, and stopping at the previously
   defined post postlimit.  
 
-.container.container--articles(role="main")
+.articles(role="main")
   ul.post-list
     //- for each article in the _data.json file in public/articles
     for article in articles.sort(function(a,b){ a = new Date(a.date); b = new Date(b.date); return b<a?-1:b>a?1:0; }).slice(0, postlimit)
