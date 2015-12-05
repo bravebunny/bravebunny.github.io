@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family-base;
+  background: $color-background;
+  color: $color-text;
+  line-height: $line-height-base;
+  font-variant: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: $color-link;
+  transition: color 0.1s ease-in-out;
+  &:hover, &:focus {
+    color: $color-link-hover;
+  }
+  &:active {
+    color: $color-link-active;
+  }
+}
+
+header, h1, h2, h3, h4, h5 {
+  font-family: $font-family-base;
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 400;
+}
+
+header.header {
+  display: block;
+  background: $green;
+  color: $light-green;
+  text-align: center;
+  padding: 20px;
+
+  a,
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    color: $light-green;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 400;
+  }
+}
+
+/* Web Fonts */
+
+.wf-loading {
+  visibility: hidden;
+}
+
+.wf-active,
+.wf-inactive {
+  visibility: visible;
+}
+
+/* Typogr.js */
+
+.sc {
+  font-family: "source-sans-pro-sc", $font-family-base;
+  text-transform: lowercase;
+  font-feature-settings: "smcp" 1, "c2sc" 1, "cpsp" 1;
+}
+
+/* Footer */
+
+.return {
+  margin-top: 2em;
+  display: inline-block;
+  padding: 1em;
+  margin-left: -1em;
+}
+
+.footer {
+  @extend .container;
+  @extend .container--articles;
+  font-size: 0.8em;
+  margin-bottom: 0;
+  margin-top: 4em;
+  color: $color-text-lighter;
+  a, &:visited {
+    color: $color-text-light;
+    &:hover, &:active, &:focus {
+      color: $color-text;
+    }
+  }
+}

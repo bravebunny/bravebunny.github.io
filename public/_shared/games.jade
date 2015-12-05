@@ -29,33 +29,43 @@ for game, slug in public.games._data
   for game in games
     .game(style="background-image: url(#{ game.backgroung })")
       .container
-        img(src="#{ game.image }")
-        h4.game-title= game.title
-        p= game.description
-        if game.web
-          a(href="#{ game.web }") 
-            i.fa.fa-gamepad
-            | Play it!
-        if game.steam
-          a(href="#{ game.steam }") 
-            i.fa.fa-steam
-            | Steam
-        if game.android
-          a(href="#{ game.android }") 
-            i.fa.fa-android
-            | Android
-        if game.apple
-          a(href="#{ game.apple }") 
-            i.fa.fa-apple
-            | iOS
-        if game.windows
-          a(href="#{ game.windows }") 
-            i.fa.fa-windows
-            | Windows
-        if game.github
-          a(href="#{ game.github }") 
-            i.fa.fa-github
-            | Source
+        .col-sm-6
+          img(src="#{ game.image }")
+
+        .col-sm-6
+          h1.game-title= game.title
+          p= game.description
+
+          if game.awards
+            p
+              i.fa.fa-trophy
+              = game.awards
+              
+
+          if game.web
+            a(href="#{ game.web }" target="_blank") 
+              i.fa.fa-gamepad
+              | Play it!
+          if game.steam
+            a(href="#{ game.steam }" target="_blank") 
+              i.fa.fa-steam
+              | Steam
+          if game.android
+            a(href="#{ game.android }" target="_blank") 
+              i.fa.fa-android
+              | Android
+          if game.apple
+            a(href="#{ game.apple }" target="_blank") 
+              i.fa.fa-apple
+              | iOS
+          if game.windows
+            a(href="#{ game.windows }" target="_blank") 
+              i.fa.fa-windows
+              | Windows
+          if game.github
+            a(href="#{ game.github }" target="_blank") 
+              i.fa.fa-github
+              | Source
 
 
 //- 

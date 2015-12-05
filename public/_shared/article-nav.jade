@@ -1,8 +1,8 @@
 - var articles = []
-for article, slug in public.articles._data
+for article, slug in public.blog._data
   if article.date && article.published!==false
     - article.slug = slug
-    - articles.push(public.articles._data[slug])
+    - articles.push(public.blog._data[slug])
 
 //- Iterate over the articles array
 each article, i in articles.sort(function(a,b){ a = new Date(a.date); b = new Date(b.date); return b<a?-1:b>a?1:0; }).slice(0, postlimit)

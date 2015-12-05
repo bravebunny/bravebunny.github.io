@@ -1,0 +1,46 @@
+.game {
+  padding: 32px;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+
+  h1 {
+    font-weight: 100;
+    font-size: 50px;
+  }
+
+  img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  a {
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 5px;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: white;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+  }
+
+  .fa {
+    margin-right: 5px;
+  }
+}
