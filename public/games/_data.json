@@ -1,0 +1,51 @@
+{
+  "extreme-fall": {
+    "title": "Extreme Fall!",
+    "date": "2015-09-15",
+    "description": "Our very first game.",
+    "awards": "2nd Place on Microsoft PizzaNight!",
+    "web": "http://xicombd.github.io/extremefall",
+    "github": "https://github.com/xicombd/extremefall"
+  },
+  "caterpillar-racer": {
+    "title": "Caterpillar Racer",
+    "date": "2015-09-15",
+    "description": "Competitive caterpillar racing simulator with realistic caterpillar physics and high definition caterpillar pixel art!",
+    "android": "https://play.google.com/store/apps/details?id=com.raicupartagmail.com.caterpillarracer"
+  },
+  "circular": {
+    "title": "Circular",
+    "date": "2015-09-15",
+    "description": "You spin me right round, baby;\nright round like a record, baby;\nRight round round round;\nYou spin me right round, baby;\nRight round like a record, baby;\nRight round round round",
+    "web": "/circular"
+  },
+  "freetanso": {
+    "title": "Freetanso",
+    "date": "2015-09-15",
+    "description": "A freaky music game!",
+    "web": "http://xicombd.github.io/free-tanso",
+    "github": "https://github.com/xicombd/free-tanso"
+  },
+  "dude": {
+    "title": "Dude, you only get one!",
+    "date": "2015-09-15",
+    "awards": "1st Place on Theme & 3rd place on Humor at Ludum Dare 28 Jam",
+    "web": "/dude"
+  },
+  "socialworms": {
+    "title": "Social worms",
+    "date": "2015-09-15",
+    "description": "3 Player worm racing simulator, now with even more realism!",
+    "web": "/socialworms"
+  },
+  "curvatron": {
+    "title": "Curvatron",
+    "date": "2015-09-15",
+    "description": "Single button snake, for up to 8 players. Trickier than it looks.",
+    "android": "https://play.google.com/store/apps/details?id=co.bravebunny.curvatron",
+    "windows": "http://apps.microsoft.com/windows/en-in/app/curvatron/1c4a11e2-fe57-4e44-9273-e33d797df92e",
+    "apple": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=983373863&mt=8",
+    "web": "http://bravebunny.github.io/curvatron",
+    "github": "https://github.com/bravebunny/curvatron"
+  }
+}

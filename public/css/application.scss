@@ -143,16 +143,12 @@ ul, ol, li {
   list-style: none;
 }
 
-.post-list {
-  margin-bottom: 3em;
-}
-
 .post-item {
-  margin-bottom: 3em;
+  margin-bottom: 20px;
 }
 
 .post-item-title {
-  font-size: 3rem;
+  font-size: 32px;
 }
 
 .post-item-title {
@@ -457,5 +453,25 @@ code {
     &:hover, &:active, &:focus {
       color: $color-text;
     }
+  }
+}
+
+.game {
+  height: 300px;
+  padding: 20px;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+
+  color: #fff;
+
+  img {
+    width: 200px;
   }
 }

@@ -1,0 +1,45 @@
+//- 
+  To keep the _data.json the same,
+  make the slug a property of the
+  object in a new array instead.
+
+- var games = []
+for game, slug in public.games._data
+  - game.slug = slug
+  for image in public.images.games._contents
+    if (image === game.slug + "-bg.png" || image === game.slug + "-bg.jpg" || image === game.slug + "-bg.gif")
+      - game.backgroung = "/images/games/" + image
+    if (image === game.slug + ".png" || image === game.slug + ".jpg" || image === game.slug + ".gif")
+      - game.image = "/images/games/" + image
+  - games.push(game)
+
+
+//- != partial("./debug", { debug: games })
+
+//- 
+  Iterate over the games,
+  using the games array from _shared/games.jade
+
+  In this case, sorting by date from newest
+  to olders, and stopping at the previously
+  defined game gamelimit.  
+
+.game-list
+  //- for each game in the _data.json file in public/games
+  for game in games
+    .game(style="background-image: url(#{ game.backgroung })")
+      .container
+        img(src="#{ game.image }")
+        h4.game-title= game.title
+        p= game.description
+        if game.github
+          a(href="#{ game.github }") Source
+
+
+//- 
+  If there are less games than the gamelimit,
+  show a link to wherever all of them
+  are show. In this case, the games page.
+
+if gamelimit < games.length
+  a(href="/games") View all games

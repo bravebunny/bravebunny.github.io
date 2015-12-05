@@ -49,7 +49,7 @@ The file goes in the `lib` directory from before. Our Curvatron directory on Win
 
 #### Get to it
 Now that everything is ready, we can start using the Greenworks API in our code. The [API Reference](https://github.com/greenheartgames/greenworks/wiki/API-Reference) has more info on how to use everything Greenworks has to offer. The first thing we need to do is initialize the API:
-```language-javascript
+```javascript
 var greenworks = require('./greenworks');
 
 if (greenworks.initAPI()) {
