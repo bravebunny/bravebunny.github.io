@@ -18,6 +18,7 @@ html {
 
 body {
   font-size: 1.25rem;
+  font-weight: 100;
 }
 
 a, a:visited {
@@ -36,6 +37,7 @@ header, h1, h2, h3, h4, h5 {
   font-family: $font-family-base;
   line-height: 1.05;
   margin: 0;
+  font-weight: 400;
 }
 
 header.header {
@@ -103,16 +105,17 @@ ul, ol, li {
 */
 
 .container {
-  max-width: 28em;
+  width: auto;
+  max-width: 1440px;
   margin: 0 auto 4em auto;
   padding: 0 1.6em;
   transition: max-width 0.5s;
   img {
     width: 100%;
   }
-  @media (min-width: $screen-medium) {
-    max-width: 33em;
-  }
+  // @media (min-width: $screen-medium) {
+  //   max-width: 33em;
+  // }
 }
 
 .container--articles {
@@ -249,7 +252,6 @@ ul, ol, li {
   width: 100%;
   margin: 0;
   padding: 0;
-  opacity: 0.75;
   position: relative;
   display: block;
   @media (min-width: $screen-large) {
@@ -473,5 +475,17 @@ code {
 
   img {
     width: 200px;
+  }
+
+  a,
+  a:active,
+  a:hover,
+  a:focus {
+    color: white;
+    font-size: 14px;
+
+    .fa {
+      margin-right: 5px;
+    }
   }
 }
