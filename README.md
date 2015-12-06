@@ -25,6 +25,10 @@ git merge source
 
 harp compile _harp ./
 
+git add --all
+
+git commit -m "Compile harp"
+
 git push origin master -f
 
 git checkout source
