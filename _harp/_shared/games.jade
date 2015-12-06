@@ -29,10 +29,10 @@ for game, slug in public.games._data
   for game in games
     .game(style="background-image: url(#{ game.backgroung })")
       .container
-        .col-sm-6
+        .col-sm-6.col-md-4
           img(src="#{ game.image }")
 
-        .col-sm-6
+        .col-sm-6.col-md-8
           h1.game-title= game.title
           p= game.description
 

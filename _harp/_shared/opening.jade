@@ -2,9 +2,13 @@
   for image in public.images.blog._contents
     if image === current.path[1] + (".jpg" || ".png" || ".svg" || ".gif")
       img.opening-image(src="/images/blog/#{ image }", alt="")
-  header.opening-header
-    .container
-      a(href="/").opening-return Home
+  header.container.opening-header
+    .hidden-xs.col-sm-5.col-md-4.col-lg-3
+      != partial("logo")
+    .visible-xs.col-xs-2
+      != partial("logo")
+
+    .col-xs-10.col-sm-9.col-sm-7.col-md-8.col-lg-9
       if title
         h1.opening-title(class="#{ title.length > 30 ? 'opening-title--long' : '' }")!= title
       if date

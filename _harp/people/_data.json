@@ -1,0 +1,20 @@
+{
+  "ricardo": {
+    "title": "Ricardo Lopes",
+    "name": "Ricardo Lopes",
+    "twitter": "https://twitter.com/raicuparta",
+    "github": "https://github.com/raicuparta"
+  },
+  "francisco": {
+    "title": "Francisco Dias",
+    "name": "Francisco Dias",
+    "twitter": "https://twitter.com/xicombd",
+    "github": "https://github.com/xicombd"
+  },
+  "tiago": {
+    "title": "Tiago Jerónimo Silva",
+    "name": "Tiago Jerónimo Silva",
+    "twitter": "https://twitter.com/JeronimoPie",
+    "github": "https://github.com/TiagoJeronimo"
+  }
+}

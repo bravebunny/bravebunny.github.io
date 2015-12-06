@@ -41,12 +41,11 @@ h1 {
   font-size: 50px;
 }
 
-header.header {
-  display: block;
-  background: $green;
+.logo {
   color: $light-green;
   text-align: center;
-  padding: 20px;
+  display: block;
+  z-index: 100;
 
   img {
     width: 250px;
@@ -58,6 +57,12 @@ header.header {
     font-size: 40px;
     font-weight: 300;
   }
+}
+
+header.header {
+  display: block;
+  background: $green;
+  padding: 20px;
 }
 
 /* Web Fonts */
@@ -108,6 +113,11 @@ header.header {
   background-color: #333;
   background-image: url('/images/svuv.gif');
   min-height: 350px;
+  padding: 0;
+
+  .opacity {
+    padding: 32px;
+  }
 
   .social-buttons {
     font-size: 4em;
@@ -129,4 +139,8 @@ header.header {
       opacity: 0.8;
     }
   }
+}
+
+.opacity {
+  background: url(/images/opacity.png) repeat;
 }
