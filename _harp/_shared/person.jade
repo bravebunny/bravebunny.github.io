@@ -1,0 +1,16 @@
+- var profile = public.people._data[person]
+
+for image in public.images.people._contents
+  if image === person + (".jpg" || ".png" || ".svg" || ".gif")
+    - profile.image = image
+
+.person
+  img(src="/images/people/#{ profile.image }", alt="")
+  div.name= profile.name
+  div.social
+    if profile.twitter
+      a(href="#{ profile.twitter }" target="_blank") 
+        i.fa.fa-twitter
+    if profile.github
+      a(href="#{ profile.github }" target="_blank") 
+        i.fa.fa-github

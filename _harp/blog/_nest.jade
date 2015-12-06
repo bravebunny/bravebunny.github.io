@@ -2,6 +2,7 @@
 .container.post(role="main")
   != yield
   != partial("../_shared/article-nav")
+  != partial("../_shared/person", { person: author })
 if disqus
   .comments
     .container

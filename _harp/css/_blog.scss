@@ -1,6 +1,8 @@
+@import "bootstrap/variables";
+
 .articles {
   margin-top: 2em;
-  @media (min-width: $screen-medium) {
+  @media (min-width: $screen-md) {
     padding-left: 10rem;
   }
 }
@@ -49,7 +51,7 @@
 .post-meta-date {
   display: block;
   color: $color-text-lighter;
-  @media (min-width: $screen-medium) {
+  @media (min-width: $screen-md) {
     width: 10rem;
     margin-left: -10rem;
     padding-right: 1em;
@@ -82,6 +84,7 @@
   list-style-type: none;
   display: block;
   width: 100%;
+  padding: 10px;
 }
 
 .post-prev {
@@ -160,7 +163,7 @@
   padding: 0;
   position: relative;
   display: block;
-  @media (min-width: $screen-large) {
+  @media (min-width: $screen-lg) {
     transform: translateY(-25%);
   }
   & + .opening-header {
@@ -183,35 +186,19 @@
   line-height: 1;
   font-weight: 800;
   font-size: 2.5rem;
-  @media (min-width: $screen-medium) {
-    font-size: 3rem;
-  }
-  @media (min-width: 29em) {
-    font-size: 3.25rem;
-  }
-  @media (min-width: 35em) {
-    font-size: 4.5rem;
-  }
-  @media (min-width: 39em) {
-    font-size: 5.25rem;
-  }
-  @media (min-width: $screen-medium) {
-    margin-top: 0.25em;
-    font-size: 6.25rem;
-  }
 }
 
 .opening-title--long {
-  font-size: 2rem;
+  font-size: 50px;
   text-transform: none;
-  @media (min-width: 30rem) {
-    font-size: 2.5rem;
+  @media (max-width: $screen-md) {
+    font-size: 50px;
   }
-  @media (min-width: $screen-medium) {
-    font-size: 3rem;
+  @media (max-width: $screen-sm) {
+    font-size: 40px;
   }
-  @media (min-width: $screen-large) {
-    font-size: 4rem;
+  @media (max-width: $screen-xs) {
+    font-size: 20px;
   }
 }
 
@@ -273,7 +260,7 @@ blockquote {
    http://miekd.com/articles/pull-quotes-with-html5-and-css/
 */
 
-@media (min-width: $screen-medium) {
+@media (min-width: $screen-md) {
   .pullquote:before {
     content: attr(data-pullquote);
     overflow: hidden;
@@ -288,7 +275,7 @@ blockquote {
       margin-left: -1.5em;
       margin-right: 1em;
     }
-    @media (min-width: $screen-large) {
+    @media (min-width: $screen-lg) {
       margin-left: -3em;
       width: 50%;
     }
@@ -354,5 +341,35 @@ code {
 
   .post-date {
     color: white;
+  }
+}
+
+.person {
+  padding: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #333;
+
+  img {
+    border: 4px solid white;
+    border-radius: 50%;
+    width: 80px;
+    box-shadow: 0px 0px 15px 5px #eee;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .social {
+    font-size: 32px;
+
+    a {
+      color: #333;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
