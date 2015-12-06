@@ -46,6 +46,10 @@ for game, slug in public.games._data
             a(href="#{ game.web }" target="_blank") 
               i.fa.fa-gamepad
               | Play it!
+          if game.mobile
+            a(href="#{ game.mobile }" target="_blank") 
+              i.fa.fa-mobile
+              | Play on a touch device
           if game.steam
             a(href="#{ game.steam }" target="_blank") 
               i.fa.fa-steam
