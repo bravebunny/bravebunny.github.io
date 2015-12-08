@@ -2,7 +2,7 @@ In this series I’ll document the steps taken to get a game made with [Phaser](
 
 Keep in mind that the only reason this series deals with the Phaser framework is because that’s the one we used. Most of the steps will be very similar, if not identical, to the ones you’d have to take on another framework. So this isn’t really a general guide but more of a diary documenting the way we decided to do it. That said, I’ll still mention some alternatives I find relevant along the way.
 
-#### Steam Greenlight
+## Steam Greenlight
 
 The first step to getting on Steam is [Greenlight](http://steamcommunity.com/greenlight/), so I’ll start there. This is already well documented and doesn’t really have anything to do with Javascript games specifically, so I’ll try to keep it short.
 
@@ -15,5 +15,3 @@ While it may be hard to tell how much the publishers helped, we have to keep in 
 If you opt to do it yourself, you’ll have to use the social media to your advantage and try to get those votes flowing. It’s also a good idea to have active discussions and updates on the Greenlight page to keep the users interested.
 
 That’s it for the first part of this series. Again, this was just a quick introduction and didn’t really focus on the actual game, but the next parts will differ in that aspect. Next I’ll be looking at the changes we had to make to our interface to make it more PC-friendly, and avoid making the player feel like they’re playing a cheap port of a mobile game.
-
-[**Part 2 - Making it Look and Feel Like a PC Game**](getting-a-phaser-game-on-steam-2)
