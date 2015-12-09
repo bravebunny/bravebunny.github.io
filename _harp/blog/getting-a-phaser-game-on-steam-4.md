@@ -11,10 +11,10 @@ Unfortunately, Greenworks doesn't include Steam leaderboards support, and I'm no
 
 You can follow the [instructions on the Greenworks Github page](https://github.com/greenheartgames/greenworks#start-greenworks-in-nwjs) if you prefer.
 
-#### Greenworks files
+## Greenworks files
 For testing our game before releasing it to Steam, well'll need to create a `steam_appid.txt` with the appID of our game inside it. The appid can be found over at the Steamwork admin page for our game, right next to its name. Just create the text file with nothing but the appID in it.
 
-{<1>}![appID](http://i.imgur.com/rACHgH4.png)
+![appID](http://i.imgur.com/rACHgH4.png)
 
 We also need the compiled Greenworks files, which we can [download from Github](https://github.com/greenheartgames/greenworks/releases/latest). We want the release zip, not the source. These releases are for NW.js, in different circumstances we need to [build it ourselves](https://github.com/greenheartgames/greenworks/tree/0.5.1#building-instructions).
 
@@ -24,9 +24,9 @@ It's best to start by picking just one OS/architecture to get things up and runn
 
 So now, inside our game directory, we have a new `greenheart.js` file and a new directory with a file `lib/greenworks-[whatever].node`.
 
-#### Steamworks SDK files
+## Steamworks SDK files
 Now we're gonna get some files from the Steamworks SDK, which can be found over at the [Steamworks page](https://partner.steamgames.com/). A Steam account is required, and you might need to accept an agreement if this is the first time you're doing this. I'm assuming you already have access to your game's admin page, otherwise there's not much you can do with Steamworks.
-{<2>}![Steam SDK Download](http://i.imgur.com/LKicqrf.png)
+![Steam SDK Download](http://i.imgur.com/LKicqrf.png)
 
 Extract the zip somewhere (we don't need the whole thing in our game). Again, we'll have to choose the correct file. The file(s) we need are in the `sdk/redestributable_bin/` directory of the Steamworks SDK:
 
@@ -47,7 +47,7 @@ The file goes in the `lib` directory from before. Our Curvatron directory on Win
 `-- steam_appid.txt
 ```
 
-#### Get to it
+## Get to it
 Now that everything is ready, we can start using the Greenworks API in our code. The [API Reference](https://github.com/greenheartgames/greenworks/wiki/API-Reference) has more info on how to use everything Greenworks has to offer. The first thing we need to do is initialize the API:
 ```javascript
 var greenworks = require('./greenworks');
