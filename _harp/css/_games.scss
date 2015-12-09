@@ -28,4 +28,21 @@
   .fa {
     margin-right: 5px;
   }
+
+  &.game-featured {
+    padding: 70px 0;
+    font-size: 24px;
+
+    h1 {
+      font-size: 100px;
+
+      @media (max-width: $screen-sm) {
+        font-size: 60px;
+      }
+    }
+
+    img {
+      margin-top: 24px;
+    }
+  }
 }

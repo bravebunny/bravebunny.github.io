@@ -1,0 +1,72 @@
+//- 
+  To keep the _data.json the same,
+  make the slug a property of the
+  object in a new array instead.
+
+- var games = []
+- var featuredGame
+for game, slug in public.games._data
+  - game.slug = slug
+  for image in public.images.games._contents
+    if (image === game.slug + "-bg.png" || image === game.slug + "-bg.jpg" || image === game.slug + "-bg.gif")
+      - game.backgroung = "/images/games/" + image
+    if (image === game.slug + ".png" || image === game.slug + ".jpg" || image === game.slug + ".gif")
+      - game.image = "/images/games/" + image
+    if (game.featured)
+      - featuredGame = game
+  - games.push(game)
+
+
+//- != partial("./debug", { debug: featuredGame })
+
+//- 
+  Iterate over the games,
+  using the games array from _shared/games.jade
+
+  In this case, sorting by date from newest
+  to olders, and stopping at the previously
+  defined game gamelimit.  
+
+.game.game-featured(style="background-image: url(#{ featuredGame.backgroung })")
+  .container
+    .col-sm-12.col-md-6
+      h1.featuredGame-title= featuredGame.title
+      p= featuredGame.description
+
+      if featuredGame.awards
+        p
+          i.fa.fa-trophy
+          = featuredGame.awards
+          
+
+      if featuredGame.web
+        a(href="#{ featuredGame.web }" target="_blank") 
+          i.fa.fa-featuredGamepad
+          | Play it!
+      if featuredGame.mobile
+        a(href="#{ featuredGame.mobile }" target="_blank") 
+          i.fa.fa-mobile
+          | Play on a touch device
+      if featuredGame.steam
+        a(href="#{ featuredGame.steam }" target="_blank") 
+          i.fa.fa-steam
+          | Steam
+      if featuredGame.android
+        a(href="#{ featuredGame.android }" target="_blank") 
+          i.fa.fa-android
+          | Android
+      if featuredGame.apple
+        a(href="#{ featuredGame.apple }" target="_blank") 
+          i.fa.fa-apple
+          | iOS
+      if featuredGame.windows
+        a(href="#{ featuredGame.windows }" target="_blank") 
+          i.fa.fa-windows
+          | Windows
+      if featuredGame.github
+        a(href="#{ featuredGame.github }" target="_blank") 
+          i.fa.fa-github
+          | Source
+
+    .col-sm-12.col-md-6
+      img(src="#{ featuredGame.image }")

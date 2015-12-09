@@ -11,7 +11,9 @@ for game, slug in public.games._data
       - game.backgroung = "/images/games/" + image
     if (image === game.slug + ".png" || image === game.slug + ".jpg" || image === game.slug + ".gif")
       - game.image = "/images/games/" + image
-  - games.push(game)
+
+  if showAllGames || !game.featured
+    - games.push(game)
 
 
 //- != partial("./debug", { debug: games })
