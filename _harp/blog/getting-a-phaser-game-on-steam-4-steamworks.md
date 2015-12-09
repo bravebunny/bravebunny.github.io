@@ -1,4 +1,4 @@
-On the [previous part of this series](getting-a-phaser-game-on-steam-3), I mentioned the node.js addon [Greenworks](https://github.com/greenheartgames/greenworks). It allows our javascript code to make calls to the Steamworks API, which is basically how we interact with some of the fun stuff Steam has to offer, like:
+On the [previous part of this series](getting-a-phaser-game-on-steam-3-executable), I mentioned the node.js addon [Greenworks](https://github.com/greenheartgames/greenworks). It allows our javascript code to make calls to the Steamworks API, which is basically how we interact with some of the fun stuff Steam has to offer, like:
 
 * User information
 * Achievements
