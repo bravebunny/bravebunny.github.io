@@ -1,9 +1,6 @@
 {
   "globals": {
     "title": "Brave Bunny",
-    "description": "Brave Bunny",
-    "name": "",
-    "email": "",
     "uri": "bravebunny.co",
 
     "typekit": false,
