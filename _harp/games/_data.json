@@ -11,14 +11,14 @@
     "title": "Caterpillar Racer",
     "date": "2015-09-15",
     "description": "Competitive caterpillar racing simulator with realistic caterpillar physics and high definition caterpillar pixel art!",
-    "web": "https://dl.dropboxusercontent.com/u/8262744/KeyboardCaterpillars/index.html",
-    "mobile": "https://dl.dropboxusercontent.com/u/8262744/Caterpillars/index.html"
+    "web": "http://caterpillar.bravebunny.co",
+    "mobile": "http://m.caterpillar.bravebunny.co"
   },
   "circular": {
     "title": "Circular",
     "date": "2015-09-15",
     "description": "You spin me right round, baby;\nright round like a record, baby;\nRight round round round;\nYou spin me right round, baby;\nRight round like a record, baby;\nRight round round round",
-    "web": "https://dl.dropboxusercontent.com/u/8262744/CircularKongregate/index.html"
+    "web": "http://circular.bravebunny.co"
   },
   "freetanso": {
     "title": "Freetanso",
@@ -31,13 +31,13 @@
     "title": "Dude, you only get one!",
     "date": "2015-09-15",
     "awards": "1st Place on Theme & 3rd place on Humor at Ludum Dare 28 Jam",
-    "web": "https://dl.dropboxusercontent.com/u/8262744/DudeYouOnlyGetOne/index.html"
+    "web": "http://dude.bravebunny.co"
   },
   "socialworms": {
     "title": "Social worms",
     "date": "2015-09-15",
     "description": "3 Player worm racing simulator, now with even more realism!",
-    "web": "https://dl.dropboxusercontent.com/u/8262744/WormMP/index.html"
+    "web": "http://social-worms.bravebunny.co"
   },
   "curvatron": {
     "title": "Curvatron",
