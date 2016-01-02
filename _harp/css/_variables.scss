@@ -24,7 +24,7 @@ $color-background: #fff;
 $color-text: #555;
 $color-text-light: lighten($color-text, 20%);
 $color-text-lighter: lighten($color-text, 40%);
-$color-header: #EAEAEA;
+$color-header: $light-green;
 
 $color-gray: darken($color-background, 5%);
 $color-gray-dark: darken($color-background, 25%);

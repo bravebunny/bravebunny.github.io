@@ -1,6 +1,6 @@
 # Brave Bunny
 
-Based on [Harp](http://harpjs.com/), an the [Remedy](https://github.com/kennethormandy/hb-remedy) theme.
+Based on [Harp](http://harpjs.com/), and the [Remedy](https://github.com/kennethormandy/hb-remedy) theme.
 
 ## Get started
 
