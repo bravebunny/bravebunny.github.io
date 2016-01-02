@@ -1,5 +1,13 @@
 script.
-  if (window.location.pathname[window.location.pathname.length - 1] === '/') {
+  if (window.location.pathname.indexOf('circular') !== -1) {
+    window.location = 'http://circular.bravebunny.co'
+  } else if (window.location.pathname.indexOf('extremefall') !== -1) {
+    window.location = 'http://xicombd.github.io/extremefall'
+  } else if (window.location.pathname.indexOf('tanso') !== -1) {
+    window.location = 'http://xicombd.github.io/free-tanso'
+  } else if (window.location.pathname.indexOf('socialworms') !== -1) {
+    window.location = 'http://social-worms.bravebunny.co/'
+  } else if (window.location.pathname[window.location.pathname.length - 1] === '/') {
     window.location = window.location.pathname.substr(0, window.location.pathname.length - 1)
   }
 
