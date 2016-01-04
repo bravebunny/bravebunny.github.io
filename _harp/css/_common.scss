@@ -167,25 +167,28 @@ header.header {
     font-size: 28px;
   }
 
-  label {
-    display: block;
-  }
+  form {
+    padding: 15px 0;
 
-  input {
-    padding: 5px 10px;
-    border: 1px solid $dark-green;
-    border-radius: 3px;
-    border-width: 1px;
-
-    &.email {
-      width: 240px;
-      margin-bottom: 5px;
+    label {
+      display: block;
     }
+    input {
+      padding: 5px 10px;
+      border: 1px solid $dark-green;
+      border-radius: 3px;
+      border-width: 1px;
 
-    &.button {
-      color: $green;
-      border-color: $green;
-      background-color: transparent;
+      &.email {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
+      &.button {
+        color: $green;
+        border-color: $green;
+        background-color: transparent;
+      }
     }
   }
 }
