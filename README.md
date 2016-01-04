@@ -17,6 +17,12 @@ Now visit [localhost:9000](http://localhost:9000) in your browser.
 ## Compile and deploy
 
 ```sh
+./deploy.sh
+```
+
+Or perform the following steps individually:
+
+```sh
 git checkout master
 
 git reset --hard HEAD~1
