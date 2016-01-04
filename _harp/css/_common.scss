@@ -150,3 +150,43 @@ header.header {
   text-align: center;
   padding: 60px 0;
 }
+
+.mailchimp {
+  color: $dark-green;
+  font-size: 14px;
+  padding: 20px 0;
+
+  h1, h2 {
+    font-weight: 100;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  label {
+    display: block;
+  }
+
+  input {
+    padding: 5px 10px;
+    border: 1px solid $dark-green;
+    border-radius: 3px;
+    border-width: 1px;
+
+    &.email {
+      width: 240px;
+      margin-bottom: 5px;
+    }
+
+    &.button {
+      color: $green;
+      border-color: $green;
+      background-color: transparent;
+    }
+  }
+}
