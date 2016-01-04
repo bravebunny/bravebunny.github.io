@@ -12,7 +12,7 @@ for game, slug in public.games._data
     if (image === game.slug + ".png" || image === game.slug + ".jpg" || image === game.slug + ".gif")
       - game.image = "/images/games/" + image
 
-  if showAllGames || !game.featured
+  if showAllGames || (!game.featured && !game.prototype)
     - games.push(game)
 
 
