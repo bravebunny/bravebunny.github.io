@@ -46,3 +46,28 @@
     }
   }
 }
+
+.game-prototypes {
+  padding-top: 30px;
+  background-color: $green;
+
+  h1 {
+    color: $light-green;
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 100;
+  }
+
+  .game-links {
+    a {
+      margin: none;
+      font-size: 24px;
+    }
+
+    label {
+      display: none;
+    }
+  }
+}

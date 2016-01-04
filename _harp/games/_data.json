@@ -75,9 +75,16 @@
     "prototype": true
   },
   "quizzord": {
-    "title": "A simple online quiz game",
+    "title": "Quizzord",
+    "description": "A simple online quiz game",
     "web": "https://github.com/xicombd/quizzord",
     "github": "http://quizzord.herokuapp.com/r/main",
+    "prototype": true
+  },
+  "block-loader": {
+    "title": "Block Loader",
+    "description": "Interactive loading screen for #LoadingJam",
+    "web": "http://bravebunny.itch.io/block-loader",
     "prototype": true
   }
 }

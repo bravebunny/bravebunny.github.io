@@ -4,6 +4,7 @@
   object in a new array instead.
 
 - var games = []
+- var prototypes = []
 for game, slug in public.games._data
   - game.slug = slug
   for image in public.images.games._contents
@@ -14,6 +15,8 @@ for game, slug in public.games._data
 
   if showAllGames || (!game.featured && !game.prototype)
     - games.push(game)
+  if game.prototype
+    - prototypes.push(game)
 
 
 //- != partial("./debug", { debug: games })
@@ -26,7 +29,7 @@ for game, slug in public.games._data
   to olders, and stopping at the previously
   defined game gamelimit.  
 
-.game-list
+#games.game-list
   //- for each game in the _data.json file in public/games
   for game in games
     .game(style="background-image: url(#{ game.backgroung })")
@@ -42,37 +45,18 @@ for game, slug in public.games._data
             p
               i.fa.fa-trophy
               = game.awards
-              
+          
+          != partial("game-links", { game: game })
 
-          if game.web
-            a(href="#{ game.web }" target="_blank") 
-              i.fa.fa-gamepad
-              | Play it!
-          if game.mobile
-            a(href="#{ game.mobile }" target="_blank") 
-              i.fa.fa-mobile
-              | Play on a touch device
-          if game.steam
-            a(href="#{ game.steam }" target="_blank") 
-              i.fa.fa-steam
-              | Steam
-          if game.android
-            a(href="#{ game.android }" target="_blank") 
-              i.fa.fa-android
-              | Android
-          if game.apple
-            a(href="#{ game.apple }" target="_blank") 
-              i.fa.fa-apple
-              | iOS
-          if game.windows
-            a(href="#{ game.windows }" target="_blank") 
-              i.fa.fa-windows
-              | Windows
-          if game.github
-            a(href="#{ game.github }" target="_blank") 
-              i.fa.fa-github
-              | Source
-
+  #prototypes.game-prototypes
+    .container
+      h1 Prototypes
+      for game in prototypes
+        .col-sm-4.col-md-4
+          .game(style="background-image: url(#{ game.backgroung })")
+            img(src="#{ game.image }")
+            h3.game-title= game.title
+            != partial("game-links", { game: game })
 
 //- 
   If there are less games than the gamelimit,
