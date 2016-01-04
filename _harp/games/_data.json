@@ -2,6 +2,7 @@
   "extreme-fall": {
     "title": "Extreme Fall!",
     "description": "Our very first game.",
+    "color": "#5D9D98",
     "awards": "2nd Place on Microsoft PizzaNight!",
     "web": "http://xicombd.github.io/extremefall",
     "github": "https://github.com/xicombd/extremefall"
@@ -9,39 +10,46 @@
   "caterpillar-racer": {
     "title": "Caterpillar Racer",
     "description": "Competitive caterpillar racing simulator with realistic caterpillar physics and high definition caterpillar pixel art!",
+    "color": "#361130",
     "web": "http://caterpillar.bravebunny.co",
     "mobile": "http://m.caterpillar.bravebunny.co"
   },
   "circular": {
     "title": "Circular",
     "description": "You spin me right round, baby;\nright round like a record, baby;\nRight round round round;\nYou spin me right round, baby;\nRight round like a record, baby;\nRight round round round",
+    "color": "#03344F",
     "web": "http://circular.bravebunny.co"
   },
   "freetanso": {
     "title": "Freetanso",
     "description": "A freaky music game!",
+    "color": "#191919",
     "web": "http://xicombd.github.io/free-tanso",
     "github": "https://github.com/xicombd/free-tanso"
   },
   "dude": {
     "title": "Dude, you only get one!",
+    "color": "#262626",
     "awards": "1st Place on Theme & 3rd place on Humor at Ludum Dare 28 Jam",
     "web": "http://dude.bravebunny.co"
   },
   "moonshot": {
     "title": "Moonshot",
     "description": "A realtime multiplayer HTML5 game using node and websockets",
+    "color": "#75716B",
     "github": "https://github.com/xicombd/moonshot",
     "web": "https://dogemoonshot.herokuapp.com/"
   },
   "socialworms": {
     "title": "Social worms",
     "description": "3 Player worm racing simulator, now with even more realism!",
+    "color": "#9C9284",
     "web": "http://social-worms.bravebunny.co"
   },
   "curvatron": {
     "title": "Curvatron",
     "description": "Single button snake, for up to 8 players. Trickier than it looks.",
+    "color": "#473051",
     "android": "https://play.google.com/store/apps/details?id=co.bravebunny.curvatron",
     "apple": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=983373863&mt=8",
     "web": "http://bravebunny.github.io/curvatron",

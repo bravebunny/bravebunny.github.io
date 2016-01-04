@@ -32,7 +32,7 @@ for game, slug in public.games._data
 #games.game-list
   //- for each game in the _data.json file in public/games
   for game in games
-    .game(style="background-image: url(#{ game.backgroung })")
+    .game(style="background-color: #{ game.color }; background-image: url(#{ game.backgroung });")
       .container
         .col-sm-6.col-md-4
           img(src="#{ game.image }")
