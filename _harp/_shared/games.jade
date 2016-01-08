@@ -53,7 +53,7 @@ for game, slug in public.games._data
       h1 Prototypes
       for game in prototypes
         .col-sm-4.col-md-4
-          .game(style="background-image: url(#{ game.backgroung })")
+          .game
             img(src="#{ game.image }")
             h3.game-title= game.title
             != partial("game-links", { game: game })
