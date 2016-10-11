@@ -11,14 +11,14 @@
     "title": "Caterpillar Racer",
     "description": "Competitive caterpillar racing simulator with realistic caterpillar physics and high definition caterpillar pixel art!",
     "color": "#361130",
-    "web": "http://caterpillar.bravebunny.co",
-    "mobile": "http://m.caterpillar.bravebunny.co"
+    "web": "https://bravebunny.itch.io/caterpillar-racer",
+    "mobile": "https://bravebunny.itch.io/caterpillar-racer-touch"
   },
   "circular": {
     "title": "Circular",
     "description": "You spin me right round, baby;\nright round like a record, baby;\nRight round round round;\nYou spin me right round, baby;\nRight round like a record, baby;\nRight round round round",
     "color": "#03344F",
-    "web": "http://circular.bravebunny.co"
+    "web": "https://bravebunny.itch.io/circular"
   },
   "freetanso": {
     "title": "Freetanso",
@@ -31,7 +31,7 @@
     "title": "Dude, you only get one!",
     "color": "#262626",
     "awards": "1st Place on Theme & 3rd place on Humor at Ludum Dare 28 Jam",
-    "web": "http://dude.bravebunny.co"
+    "web": "https://bravebunny.itch.io/dude-you-only-get-one"
   },
   "moonshot": {
     "title": "Moonshot",
@@ -44,19 +44,19 @@
     "title": "Social Worms",
     "description": "3 Player worm racing simulator, now with even more realism!",
     "color": "#9C9284",
-    "web": "http://social-worms.bravebunny.co"
+    "web": "https://bravebunny.itch.io/social-worms"
   },
   "pixel-crate": {
     "title": "Pixel Crate",
     "color": "#707A84",
     "description": "Get all the boxes!",
-    "web": "http://pixel-crate.bravebunny.co"
+    "web": "https://bravebunny.itch.io/pixel-crate"
   },
   "keyboard-killer": {
     "title": "Keyboard Killer",
     "color": "#6B6051",
     "description": "A simple typing game",
-    "web": "http://keyboard-killer.bravebunny.co"
+    "web": "https://bravebunny.itch.io/keyboard-killer"
   },
   "curvatron": {
     "title": "Curvatron",
