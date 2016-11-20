@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><title> 
+Brave Bunny - Getting a Phaser Game on Steam 4 - Steamworks</title><meta name="description" content="We are a small group of friends who love programming and making silly games. Give the games a try and follow us for updates!"/><meta name="author" content="Francisco Dias, Ricardo Lopes and Tiago Silva"/><meta name="handheldfriendly" content="true"/><meta name="mobileoptimized" content="320"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="cleartype" content="on"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta property="og:title" content="Getting a Phaser Game on Steam 4 - Steamworks"/><meta property="og:image" content="http://bravebunny.co/images/bunny2.png"/><meta property="og:site_name" content="Brave Bunny"/><link rel="shortcut icon" href="/images/favicon.ico"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500"/><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/><link rel="stylesheet" href="/css/application.css"/></head><body><div class="opening"><img src="/images/blog/getting-a-phaser-game-on-steam-4-steamworks.jpg" alt="" class="opening-image"/><header class="container opening-header"><div class="hidden-xs col-sm-5 col-md-4 col-lg-3"><a href="/" class="logo"><img src="/images/bunny2.png" alt="Brave Bunny"/><h1>Brave Bunny</h1></a></div><div class="visible-xs col-xs-2"><a href="/" class="logo"><img src="/images/bunny2.png" alt="Brave Bunny"/><h1>Brave Bunny</h1></a></div><div class="col-xs-10 col-sm-7 col-md-8 col-lg-9"><h1 class="opening-title opening-title--long">Getting a Phaser Game on Steam 4 - Steamworks</h1><time datetime="2015-10-21" class="opening-time">2015-10-21</time></div></header></div><div role="main" class="container post"><p>On the <a href="getting-a-phaser-game-on-steam-3-executable">previous part of this series</a>, I mentioned the node.js addon <a href="https://github.com/greenheartgames/greenworks">Greenworks</a>. It allows our javascript code to make calls to the Steamworks API, which is basically how we interact with some of the fun stuff Steam has to offer, like:</p>
+<ul>
+<li>User information</li>
+<li>Achievements</li>
+<li>Steam Cloud</li>
+<li>Steam Workshop</li>
+</ul>
+<p>It is a really amazing project, has helped a lot of people, and I&#39;m sure most people (me included) wouldn&#39;t even know where to start if they had to do it themselves. So, if you can, thank Greenheart Games for putting so much work into this by <a href="https://pledgie.com/campaigns/27218">donating to help the project</a>.</p>
+<p>Unfortunately, Greenworks doesn&#39;t include Steam leaderboards support, and I&#39;m not sure I have the knowledge to implement it myself. So we&#39;ll have to find another way to bring a social element to the game, perhaps to discuss in a future article.</p>
+<p>You can follow the <a href="https://github.com/greenheartgames/greenworks#start-greenworks-in-nwjs">instructions on the Greenworks Github page</a> if you prefer.</p>
+<h2>Greenworks files</h2><p>For testing our game before releasing it to Steam, well&#39;ll need to create a <code>steam_appid.txt</code> with the appID of our game inside it. The appid can be found over at the Steamwork admin page for our game, right next to its name. Just create the text file with nothing but the appID in it.</p>
+<p><img src="http://i.imgur.com/rACHgH4.png" alt="appID"></p>
+<p>We also need the compiled Greenworks files, which we can <a href="https://github.com/greenheartgames/greenworks/releases/latest">download from Github</a>. We want the release zip, not the source. These releases are for NW.js, in different circumstances we need to <a href="https://github.com/greenheartgames/greenworks/tree/0.5.1#building-instructions">build it ourselves</a>.</p>
+<p>We could extract the whole thing willy-nilly into our game directory (alongide our <code>index.html</code>), but we should really just pick one of the files inside that <code>lib</code> directory, depending on the OS and architecture of our executable. This has to coincide with the version of NW.js we&#39;re using, or our export options in Web2Executable (<a href="http://blog.bravebunny.co/getting-a-phaser-game-on-steam-3-executable/">see Part 3</a>).</p>
+<p>It&#39;s best to start by picking just one OS/architecture to get things up and running. On Windows, we can get away with having only an x32 version (although it would still be preferable to have a separate x64 version), but on Linux it would be wise to have separate versions for x32 and x64.</p>
+<p>So now, inside our game directory, we have a new <code>greenheart.js</code> file and a new directory with a file <code>lib/greenworks-[whatever].node</code>.</p>
+<h2>Steamworks SDK files</h2><p>Now we&#39;re gonna get some files from the Steamworks SDK, which can be found over at the <a href="https://partner.steamgames.com/">Steamworks page</a>. A Steam account is required, and you might need to accept an agreement if this is the first time you&#39;re doing this. I&#39;m assuming you already have access to your game&#39;s admin page, otherwise there&#39;s not much you can do with Steamworks.
+<img src="http://i.imgur.com/LKicqrf.png" alt="Steam SDK Download"></p>
+<p>Extract the zip somewhere (we don&#39;t need the whole thing in our game). Again, we&#39;ll have to choose the correct file. The file(s) we need are in the <code>sdk/redestributable_bin/</code> directory of the Steamworks SDK:</p>
+<ul>
+<li><code>steam_api.dll</code> (Windows x32)</li>
+<li><code>win64/steam_api.dll</code></li>
+<li><code>osx32/libsteam_api.dylib</code></li>
+<li><code>linux32/libsteam_api.so</code></li>
+<li><code>linux64/libsteam_api.so</code></li>
+</ul>
+<p>The file goes in the <code>lib</code> directory from before. Our Curvatron directory on Windows is now something like this:</p>
+<pre><code>|-- greenworks.js
+|-- index.html
+|-- lib
+|   |-- greenworks-win32.node
+|   `-- steam_api.dll
+`-- package.json
+`-- steam_appid.txt
+</code></pre><h2>Get to it</h2><p>Now that everything is ready, we can start using the Greenworks API in our code. The <a href="https://github.com/greenheartgames/greenworks/wiki/API-Reference">API Reference</a> has more info on how to use everything Greenworks has to offer. The first thing we need to do is initialize the API:</p>
+<pre><code class="language-javascript">var greenworks = require(&#39;./greenworks&#39;);
+
+if (greenworks.initAPI()) {
+  console.log(&#39;Steam API has been initalized.&#39;);
+} else {
+  console.log(&#39;Error on initializing Steam API&#39;);
+}
+</code></pre>
+<p>Then all we need to do is use the <code>greenworks</code> variable to call any of the <a href="https://github.com/greenheartgames/greenworks/wiki/Greenworks-API">available methods</a>. It&#39;s important to keep in mind that some of the methods might not be finished, so we should always test everything before implementing features that depend on Greenworks features.</p>
+<p>That&#39;s it for now. On the next parts I will go into the specifics of some of the Steamworks features and how to use them through Greenworks.</p><ol class="post-nav"><a href="getting-a-phaser-game-on-steam-3-executable" class="post-next">Getting a Phaser Game on Steam 3 - Making an Executable</a></ol><div class="person"><img src="/images/people/ricardo.jpg" alt=""/><div class="name">Ricardo Lopes</div><div class="social"><a href="https://twitter.com/raicuparta" target="_blank"> <i class="fa fa-twitter"></i></a><a href="https://github.com/raicuparta" target="_blank"> <i class="fa fa-github"></i></a></div></div><div class="mailchimp"><div class="container"><div class="col-sm-8 col-md-8"><h1>Like what you see? </h1><h2>Subscribe to our newsletter</h2><div>We promise we won't spam :)</div></div><div class="col-sm-4 col-md-4"><div id="mc_embed_signup" class="mailchimp-form"><form action="//bravebunny.us12.list-manage.com/subscribe/post?u=b532374a112b4371b87b91cb7&amp;amp;id=970bbb7b58" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="validate"><div id="mc_embed_signup_scroll"><div class="mc-field-group"><label for="mce-EMAIL">Email Address</label><input id="mce-EMAIL" type="email" value="" name="EMAIL" class="required email"/><div id="mce-responses" class="clear"><div id="mce-error-response" style="display:none" class="response"></div><div id="mce-success-response" style="display:none" class="response"></div></div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b532374a112b4371b87b91cb7_970bbb7b58" tabindex="-1" value=""/></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"/></div></div></form></div></div></div></div></div><footer role="contentinfo" class="footer"><div class="opacity"><a href="/"><h1>About us</h1></a><p>We're just a group of friends passionate about making video games who don't really feel like spending a lot of time in the about section of their website.<br/>Give the games a try and follow us for updates :)<p>Wanna talk? Say<a href="mailto:hello@bravebunny.co">hello@bravebunny.co</a></p><p class="social-buttons"><a href="https://www.facebook.com/bravebunnygames" target="_blank"><i class="fa fa-facebook-square"></i></a><a href="http://twitter.com/bravebunnygames" target="_blank"><i class="fa fa-twitter"></i></a><a href="http://github.com/bravebunny" target="_blank"><i class="fa fa-github"></i></a></p><p><a href="http://twitter.com/raicuparta" target="_blank">@Raicuparta</a><a href="http://twitter.com/JeronimoPie" target="_blank">@JeronimoPie</a><a href="http://twitter.com/xicombd" target="_blank">@xicombd</a></p></p></div></footer></body><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-53292019-1', 'auto');
+ga('send', 'pageview');</script></html>
