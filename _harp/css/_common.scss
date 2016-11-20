@@ -166,7 +166,9 @@ header.header {
   h2 {
     font-size: 28px;
   }
+}
 
+.mailchimp-form {
   form {
     padding: 15px 0;
 
@@ -178,6 +180,7 @@ header.header {
       border: 1px solid $dark-green;
       border-radius: 3px;
       border-width: 1px;
+      background: transparent;
 
       &.email {
         width: 100%;

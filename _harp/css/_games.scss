@@ -71,3 +71,71 @@
     }
   }
 }
+
+.pursuit-rush {
+  color: white;
+
+  .header {
+    @extend .section;
+    background-color: #454335;
+    background-image: url('/images/pursuit-rush.gif');
+    padding: 0;
+
+    .title {
+      padding-top: 50px;
+      font-size: 80px;
+    }
+
+    .opacity {
+      background: url(/images/opacity.png) repeat;
+      padding: 32px;
+      min-height: 350px;
+    }
+  }
+
+  .download {
+    @extend .section;
+    text-align: left;
+    background: #7491bd;
+
+    .newsletter {
+      margin-top: 24px;
+
+      .mailchimp-form {
+        input {
+          color: white;
+          border-color: white;
+        }
+
+        .button {
+          font-family: Arial;
+          font-weight: 900;
+          font-style: italic;
+          text-shadow: 1px 1px black;
+        }
+      }
+    }
+
+    .download-links {
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .fa {
+        width: 30px;
+      }
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+    font-family: Arial;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 2px 2px black;
+  }
+}
