@@ -4,8 +4,8 @@
     "description": "Our very first game.",
     "color": "#5D9D98",
     "awards": "2nd Place on Microsoft PizzaNight!",
-    "web": "http://xicombd.github.io/extremefall",
-    "github": "https://github.com/xicombd/extremefall"
+    "web": "https://bravebunny.co/extremefall/",
+    "github": "https://github.com/bravebunny/extremefall"
   },
   "caterpillar-racer": {
     "title": "Caterpillar Racer",
@@ -24,8 +24,8 @@
     "title": "Freetanso",
     "description": "A freaky music game!",
     "color": "#191919",
-    "web": "http://xicombd.github.io/free-tanso",
-    "github": "https://github.com/xicombd/free-tanso"
+    "web": "http://fbaiodias.github.io/free-tanso/",
+    "github": "https://github.com/fbaiodias/free-tanso"
   },
   "dude": {
     "title": "Dude, you only get one!",
@@ -37,7 +37,7 @@
     "title": "Moonshot",
     "description": "A realtime multiplayer HTML5 game using node and websockets",
     "color": "#75716B",
-    "github": "https://github.com/xicombd/moonshot",
+    "github": "https://github.com/fbaiodias/moonshot",
     "web": "https://dogemoonshot.herokuapp.com/"
   },
   "socialworms": {
@@ -71,8 +71,8 @@
   },
   "extreme-climb": {
     "title": "Extreme Climb!",
-    "web": "http://xicombd.github.io/extremeclimb",
-    "github": "https://github.com/xicombd/extremeclimb",
+    "web": "http://fbaiodias.github.io/extremeclimb",
+    "github": "https://github.com/fbaiodias/extremeclimb",
     "prototype": true
   },
   "split": {
@@ -97,7 +97,7 @@
   "quizzord": {
     "title": "Quizzord",
     "description": "A simple online quiz game",
-    "web": "https://github.com/xicombd/quizzord",
+    "web": "https://github.com/fbaiodias/quizzord",
     "github": "http://quizzord.herokuapp.com/r/main",
     "prototype": true
   },
